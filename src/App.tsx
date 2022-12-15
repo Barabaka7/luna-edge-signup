@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { ProgressIndicator } from "./components/ProgressIndicator";
+import { OnboardingStats } from "./components/OnboardingStats";
+import { WelcomeToChadForm } from "./components/WelcomeToChad";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-row h-screen">
+      <div className="hidden md:flex flex-col justify-between items-center gap-6 w-2/5 bg-blue-pattern pt-[10%] pb-[56px]">
+        <ProgressIndicator />
+        <OnboardingStats />
+      </div>
+      <div className="hidden md:flex flex-col justify-between items-center w-3/5 bg-doodle-pattern">
+        <WelcomeToChadForm />
+      </div>
     </div>
   );
 }
