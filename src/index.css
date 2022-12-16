@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url("https://stijndv.com/fonts/Eudoxus-Sans.css");
 
 @tailwind base;
 @tailwind components;
@@ -7,11 +8,40 @@
 @layer base {
   html {
     font-family: Inter;
+    font-family: Eudoxus;
   }
 }
 
-.active-indicator {
-  color: #ffffff;
-  font-weight: 500;
-  border-color: #32abf2;
+@layer components {
+  .active-text {
+    @apply font-medium;
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  .basic-indicator {
+    @apply border-mdDarkBlue-60 bg-mdDarkBlue-60 border-2 border-solid rounded-full;
+  }
+
+  .active-indicator {
+    @apply border-2 border-solid border-buttonBg rounded-full;
+  }
+
+  .active-indicator-completed {
+    @apply border-2 border-solid border-buttonBg bg-buttonBg rounded-full;
+  }
+
+  .active-indicator-already-filled {
+    @apply border-[1.5px] border-solid border-buttonBg rounded-full;
+  }
+
+  .basic-line {
+    @apply border-mdDarkBlue-60 border-l-2 border-solid;
+  }
+
+  .active-line {
+    @apply border-buttonBg border-l-2 border-solid;
+  }
+
+  /* ... */
 }

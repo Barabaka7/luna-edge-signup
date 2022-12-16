@@ -1,5 +1,11 @@
-export const ProgressLine = () => {
+interface ProgressLineProps {
+  status: boolean;
+}
+
+export const ProgressLine = ({ status }: ProgressLineProps) => {
   return (
-    <div className="h-[48px] ml-[16px] border-mdDarkBlue-60 border-l-2 border-solid active-indicator"></div>
+    <div
+      className={`h-12 ml-[15px] ${status ? "active-line" : "basic-line"}`}
+    ></div>
   );
 };
